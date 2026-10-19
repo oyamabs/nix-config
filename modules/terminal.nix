@@ -1,0 +1,32 @@
+{ pkgs, ... }:
+
+{
+	environment.systemPackages = with pkgs; [
+		vim
+		wget
+		curl
+		neovim
+		zsh
+		fastfetch
+		gnupg
+		git
+		btop
+		htop
+		wl-clipboard
+		gdb
+		khal
+		httpie
+		jq
+		figlet
+		lf
+		ncdu
+		bat
+		eza
+		fzf
+		ripgrep
+		fd
+		opencode
+		yt-dlp
+		msedit
+	];
+}
