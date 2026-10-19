@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports =
@@ -78,9 +78,15 @@
     waybar
     kitty
     mako
+    uwsm
   ];
 
   services.gnome.gnome-keyring.enable = true;
+
+  # programs.hyprland = {
+  #   enable = true;
+  # };
+
   programs.sway = {
     enable = true;
     package = pkgs.swayfx;

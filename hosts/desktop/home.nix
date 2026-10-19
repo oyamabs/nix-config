@@ -18,5 +18,11 @@
 	home.packages = with pkgs; [
 		discord
 	];
-	home.file.".config/sway".source = ../../config/sway;
+	home.file.".wallpaper.png".source = ./wallpaper.png;
+	# home.file.".config/sway".source = ../../config/sway;
+	# home.file.".config/hypr".source = ../../config/hypr;
+	home.file.".config/nvim" = {
+		source = ../../config/nvim;
+		recursive = true;
+	};
 }
