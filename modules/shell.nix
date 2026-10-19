@@ -11,6 +11,7 @@
 
     shellAliases = {
       ls = "eza";
+      cat = "bat";
     };
     histSize = 10000;
 
