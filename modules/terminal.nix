@@ -28,5 +28,8 @@
 		opencode
 		yt-dlp
 		msedit
+		tree-sitter
+		unzip
+		gnumake
 	];
 }

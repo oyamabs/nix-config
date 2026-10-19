@@ -11,6 +11,7 @@
       ../../modules/grub.nix
       ../../modules/default.nix
       ../../modules/gaming.nix
+      ../../modules/shell.nix
     ];
   gaming.enable = true;
 
@@ -59,6 +60,7 @@
   users.users."freddy" = {
     isNormalUser = true;
     description = "freddy";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
     #  thunderbird
@@ -82,11 +84,6 @@
   ];
 
   services.gnome.gnome-keyring.enable = true;
-
-  # programs.hyprland = {
-  #   enable = true;
-  # };
-
   programs.sway = {
     enable = true;
     package = pkgs.swayfx;

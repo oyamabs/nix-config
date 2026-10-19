@@ -6,6 +6,7 @@
 		./tailscale.nix
 		./fonts.nix
 		./terminal.nix
+		./programming.nix
 	];
 	# language and timezone
 	time.timeZone="Europe/Paris";
