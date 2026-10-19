@@ -33,4 +33,8 @@
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
   tailscale.enable = true;
+  environment.variables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
 }
