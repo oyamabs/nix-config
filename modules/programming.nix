@@ -1,7 +1,5 @@
-{ pkgs, ... }:
-
-{
-	environment.systemPackages = with pkgs; [
-		clang
-	];
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    clang
+  ];
 }

@@ -1,18 +1,20 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ inputs, config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../../modules/grub.nix
-      ../../modules/default.nix
-      ../../modules/gaming.nix
-      ../../modules/shell.nix
-    ];
+  inputs,
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../../modules/grub.nix
+    ../../modules/default.nix
+    ../../modules/gaming.nix
+    ../../modules/shell.nix
+  ];
   gaming.enable = true;
 
   # Enable NVidia proprietary drivers
@@ -20,13 +22,13 @@
     enable = true;
     enable32Bit = true;
   };
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
     open = true;
     modesetting.enable = true;
     powerManagement.enable = true;
     powerManagement.finegrained = false;
-    
+
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
@@ -61,10 +63,9 @@
     isNormalUser = true;
     description = "freddy";
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = ["networkmanager" "wheel" "docker"];
     packages = with pkgs; [
-    #  thunderbird
-
+      #  thunderbird
     ];
   };
 
@@ -88,7 +89,7 @@
     enable = true;
     package = pkgs.swayfx;
     wrapperFeatures.gtk = true;
-    extraOptions = [ "--unsupported-gpu" ];
+    extraOptions = ["--unsupported-gpu"];
     extraSessionCommands = ''
       export WLR_NO_HARDWARE_CURSORS=1
       export GBM_BACKEND=nvidia-drm
