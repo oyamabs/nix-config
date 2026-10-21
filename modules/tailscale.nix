@@ -8,6 +8,6 @@
     tailscale.enable = lib.mkEnableOption "Enables tailscale";
   };
   config = lib.mkIf config.tailscale.enable {
-    services.tailscale.enable = true;
+    services.tailscale.enable = lib.mkDefault true;
   };
 }

@@ -25,6 +25,7 @@
     LC_TELEPHONE = "fr_FR.UTF-8";
     LC_TIME = "fr_FR.UTF-8";
   };
+  xdg.mime.enable = true;
 
   # Keyboard (using US international with dead keys on AltGr)
   services.xserver.xkb = {
@@ -32,7 +33,7 @@
     variant = "altgr-intl";
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  tailscale.enable = true;
+  # tailscale.enable = true;
   environment.variables = {
     EDITOR = "nvim";
     VISUAL = "nvim";

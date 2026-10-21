@@ -8,7 +8,7 @@
 {
   imports = [
     # include NixOS-WSL modules
-    <nixos-wsl/modules> 
+    # <nixos-wsl/modules> 
     ../../modules/default.nix
     ../../modules/shell.nix
     ];
@@ -17,8 +17,11 @@
   wsl = {
     enable = true;
     defaultUser = "freddy";
+    startMenuLaunchers = true;
   };
-
+  services.logind.settings.Login = {
+    KillUserProcesses = false;
+  };
   tailscale.enable = false; # work machine doesn't allow vpn otherthan theirs (for obvious reasons)
 
   environment.systemPackages = with pkgs; [
@@ -30,11 +33,14 @@
     btop
   ];
 
+  services.dbus.enable = true;
+  nixpkgs.config.allowUnfree = true;
   users.users.freddy= {
     createHome = true;
     description = "freddy";
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
+    linger = true;
   };
 
   wsl.wslConf.network.hostname = "jane";

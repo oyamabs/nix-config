@@ -29,5 +29,7 @@
     tree-sitter
     unzip
     gnumake
+    tmux
+    sqlite
   ];
 }
