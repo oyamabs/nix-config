@@ -1,12 +1,12 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    sl
     vim
     wget
     curl
     neovim
     zsh
     fastfetch
-    gnupg
     git
     btop
     htop
@@ -31,5 +31,7 @@
     gnumake
     tmux
     sqlite
+    gnupg
+    pinentry-curses
   ];
 }
