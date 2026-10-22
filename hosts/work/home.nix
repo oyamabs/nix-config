@@ -14,6 +14,7 @@
       user.email = "tchampio@student.42lehavre.fr";
     };
   };
+  systemd.user.startServices = false;
   home.packages = with pkgs; [
   ];
   # home.file.".config/sway".source = ../../config/sway;

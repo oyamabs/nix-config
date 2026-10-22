@@ -23,6 +23,7 @@
     KillUserProcesses = false;
   };
   tailscale.enable = false; # work machine doesn't allow vpn otherthan theirs (for obvious reasons)
+  hardware.graphics.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
@@ -31,6 +32,7 @@
     curl
     starship
     btop
+    xeyes
   ];
 
   services.dbus.enable = true;
