@@ -28,7 +28,6 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
-    neovim
     curl
     starship
     btop
