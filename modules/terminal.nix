@@ -33,5 +33,7 @@
     sqlite
     gnupg
     pinentry-curses
+    man-pages
+    man-pages-posix
   ];
 }
