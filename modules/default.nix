@@ -33,6 +33,7 @@
     variant = "altgr-intl";
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  programs.nix-ld.enable = true;
   # tailscale.enable = true;
   environment.variables = {
     EDITOR = "nvim";
