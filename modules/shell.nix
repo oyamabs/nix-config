@@ -10,7 +10,8 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ls = "eza";
+      ls = "eza --icons";
+      tree = "eza --icon --tree";
       cat = "bat";
     };
     histSize = 10000;
@@ -42,7 +43,7 @@
     # Configuration personnalisée (génère ~/.config/starship.toml)
     settings = {
       add_newline = false;
-      format = "$directory$git_branch$character";
+      format = "$directory$git_branch$nix_shell$character";
       character = {
         success_symbol = "[➜](bold green)";
         error_symbol = "[➜](bold red)";
@@ -56,9 +57,8 @@
         fish_style_pwd_dir_length = 1;
       };
 
-      git_branch = {
-        symbol = "🌱 ";
-      };
+      git_branch.symbol = "🌱 ";
+      nix_shell.symbol = "❄️";
     };
   };
 }
