@@ -82,7 +82,14 @@
     kitty
     mako
     uwsm
+    mullvad-vpn
   ];
+
+  services.resolved.enable = true;
+  services.mullvad-vpn = {
+    enable = true;
+    gui.enable = true;
+  };
 
   services.gnome.gnome-keyring.enable = true;
   programs.sway = {
