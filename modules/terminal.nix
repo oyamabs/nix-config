@@ -13,6 +13,7 @@
     wl-clipboard
     gdb
     khal
+    vdirsyncer
     httpie
     jq
     figlet
@@ -35,5 +36,6 @@
     pinentry-curses
     man-pages
     man-pages-posix
+    glow
   ];
 }
