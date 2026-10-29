@@ -13,5 +13,5 @@
       runScript = "bash";
     })
   ];
-
+  virtualisation.docker.enable = true;
 }
