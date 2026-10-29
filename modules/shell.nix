@@ -13,6 +13,11 @@
       ls = "eza --icons";
       tree = "eza --icon --tree";
       cat = "bat";
+      task-wip = ''awk -F'|' '$2 ~ /^WIP/ { print $1"\t"$3"\t"$4 }' ~/.tasks | column -t -s $'\t' -N "ID,PRIORITY,DESCRIPTION" --color=always'';
+      task-todo = ''awk -F'|' '$2 ~ /^TODO/ { print $1"\t"$3"\t"$4 }' ~/.tasks | column -t -s $'\t' -N "ID,PRIORITY,DESCRIPTION" --color=always'';
+      task-wait = ''awk -F'|' '$2 ~ /^WAIT/ || $2 ~ /^BLOCKED/ { print $1"\t"$3"\t"$4 }' ~/.tasks | column -t -s $'\t' -N "ID,PRIORITY,DESCRIPTION" --color=always'';
+      task-blocked = ''awk -F'|' '$2 ~ /^WAIT/ || $2 ~ /^BLOCKED/ { print $1"\t"$3"\t"$4 }' ~/.tasks | column -t -s $'\t' -N "ID,PRIORITY,DESCRIPTION" --color=always'';
+      task-done = ''awk -F'|' '$2 ~ /^DONE/ { print $1"\t"$3"\t"$4 }' ~/.tasks | column -t -s $'\t' -N "ID,PRIORITY,DESCRIPTION" --color=always'';
     };
     histSize = 10000;
 
