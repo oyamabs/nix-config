@@ -39,7 +39,7 @@
   users.users.freddy= {
     createHome = true;
     description = "freddy";
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" ];
     shell = pkgs.zsh;
     linger = true;
   };

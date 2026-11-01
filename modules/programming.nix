@@ -8,4 +8,5 @@
         neovim
         nodejs
   ];
+  virtualisation.docker.enable = true;
 }
