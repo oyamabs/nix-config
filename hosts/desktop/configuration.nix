@@ -14,8 +14,10 @@
     ../../modules/default.nix
     ../../modules/gaming.nix
     ../../modules/shell.nix
+    ../../modules/tailscale.nix
   ];
   gaming.enable = true;
+  tailscale.enable = true;
 
   # Enable NVidia proprietary drivers
   hardware.graphics = {
