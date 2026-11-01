@@ -2,6 +2,7 @@
   nixpkgs,
   lib,
   config,
+  pkgs,
   ...
 }: {
   # modules
@@ -34,6 +35,30 @@
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    glib
+    nss
+    nspr
+    atk
+    cairo
+    gtk3
+    pango
+    gdk-pixbuf
+    libx11
+    libxcomposite
+    libxdamage
+    libxext
+    libxfixes
+    libxrandr
+    libxcb
+    libxkbcommon
+    mesa
+    libgbm
+    alsa-lib
+    cups
+    dbus
+    expat
+  ];
   # tailscale.enable = true;
   environment.variables = {
     EDITOR = "nvim";
