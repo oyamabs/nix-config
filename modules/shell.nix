@@ -10,8 +10,8 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ls = "eza --icons";
-      tree = "eza --icon --tree";
+      ls = "eza --icons auto";
+      tree = "eza --icons auto --tree";
       cat = "bat";
       task-wip = ''awk -F'|' '$2 ~ /^WIP/ { print $1"\t"$3"\t"$4 }' ~/.tasks | column -t -s $'\t' -N "ID,PRIORITY,DESCRIPTION" --color=always'';
       task-todo = ''awk -F'|' '$2 ~ /^TODO/ { print $1"\t"$3"\t"$4 }' ~/.tasks | column -t -s $'\t' -N "ID,PRIORITY,DESCRIPTION" --color=always'';
