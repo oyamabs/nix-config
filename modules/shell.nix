@@ -66,4 +66,8 @@
       nix_shell.symbol = "❄️";
     };
   };
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
 }
