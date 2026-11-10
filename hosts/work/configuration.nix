@@ -41,8 +41,12 @@
     description = "freddy";
     extraGroups = [ "wheel" "docker" ];
     shell = pkgs.zsh;
-    linger = true;
+    linger = false;
   };
+
+  systemd.services."user@".serviceConfig.ExecStartPre = [
+    "-+${pkgs.coreutils}/bin/chmod a+rx /sys/fs/cgroup/sensor.falcon"
+  ];
 
   wsl.wslConf.network.hostname = "jane";
 
