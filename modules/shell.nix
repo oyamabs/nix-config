@@ -52,10 +52,11 @@
       character = {
         success_symbol = "[➜](bold green)";
         error_symbol = "[➜](bold red)";
+        format = "$symbol ";
       };
 
       directory = {
-        truncation_length = 3; # Affiche jusqu'à 3 dossiers parents
+        truncation_length = 1; # Affiche jusqu'à 3 dossiers parents
         truncate_to_repo = false; # Empêche de tronquer à la racine Git si tu veux tout le chemin
         style = "bold cyan"; # Couleur du dossier
         read_only = " 󰌾"; # Icône si le dossier est en lecture seule
