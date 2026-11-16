@@ -28,6 +28,7 @@
     opencode
     yt-dlp
     msedit
+    tldr
     tree-sitter
     unzip
     gnumake
