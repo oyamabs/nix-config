@@ -6,7 +6,7 @@
         glibc.dev
         gnumake
         neovim
-        nodejs
+        nodejs_latest
   ];
   virtualisation.docker.enable = true;
 }
