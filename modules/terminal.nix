@@ -39,5 +39,6 @@
     man-pages
     man-pages-posix
     glow
+    moreutils
   ];
 }
