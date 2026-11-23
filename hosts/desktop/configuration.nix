@@ -85,7 +85,10 @@
     mako
     uwsm
     mullvad-vpn
+    spotify
   ];
+
+  programs.waybar.enable = true;
 
   services.resolved.enable = true;
   services.mullvad-vpn = {
